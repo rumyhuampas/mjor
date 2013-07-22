@@ -5,8 +5,9 @@ class Controller_Home extends Controller {
 	public function action_index()
 	{
 		$view=View::factory('home');
-		$view->title = Helpers_Const::APPNAME.' - Inicio';
-		//$view->menuid = Helpers_Const::MENUINICIOID;
+		$view->_title = Helpers_Const::APPNAME.' - Inicio';
+		$view->_menuid = Helpers_Const::MENUINICIOID;
+		$view->_menutitle = Helpers_Const::MENUINICIOTITLE;
 		//$view->lastmodif = Helpers_Cerda::getLastModifications();
 		//$view->maxweights = Helpers_Cerda::getMaxWeights();
 		$this->response->body($view->render());
