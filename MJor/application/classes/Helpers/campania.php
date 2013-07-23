@@ -1,19 +1,19 @@
 <?php defined('SYSPATH') OR die('No Direct Script Access');
 
-class Helpers_Socio {
+class Helpers_Campania {
 
 	public static function exists($name){
-		$socio = ORM::factory('socio')->where('Name', '=', $name)->find();
-		return $socio->loaded();
+		$campania = ORM::factory('campania')->where('Name', '=', $name)->find();
+		return $campania->loaded();
 	}
 	
 	public static function get($name = NULL){
 		if($name != NULL){
-			return ORM::factory('socio')
+			return ORM::factory('campania')
 				->where('Name', '=', $name)->find();
 		}
 		else{
-			return ORM::factory('socio')
+			return ORM::factory('campania')
 				->order_by('Name')
 				->find_all();
 		}
@@ -21,13 +21,13 @@ class Helpers_Socio {
 	
 	public static function getActive($name = NULL){
 		if($name != NULL){
-			return ORM::factory('socio')
+			return ORM::factory('campania')
 				->where('Name', '=', $name)
 				->and_where('Active', '=', Helpers_Const::ITEMACTIVE)
 				->find();
 		}
 		else{
-			return ORM::factory('socio')
+			return ORM::factory('campania')
 				->where('Active', '=', Helpers_Const::ITEMACTIVE)
 				->order_by('Name')
 				->find_all();

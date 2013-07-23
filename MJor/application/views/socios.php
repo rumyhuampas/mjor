@@ -2,6 +2,8 @@
 
 <?php include Kohana::find_file('views', '_headerbar'); ?>
 
+<script src=<?php echo URL::base()."/scripts/custom/socios.js" ?> type="text/javascript"></script>
+
 <!--Dreamworks Container-->
 <div id="dreamworks_container">
     
@@ -56,7 +58,8 @@
 		            	<table class="activity_datatable" width="100%" border="0" cellspacing="0" cellpadding="8">
 		                    <tr>
 		                        <th width="8%">ID</th>
-		                        <th width="92%">NOMBRE</th>
+		                        <th width="77%">NOMBRE</th>
+		                        <th width="5%">ACTIVO</th>
 		                    </tr>
 		                    <?php
 		                    if(isset($_socios)){
@@ -64,6 +67,12 @@
 		                    		echo "<tr>";
 		                    			echo "<td>".$socio->Id."</td>";
 										echo "<td>".$socio->Name."</td>";
+										echo "<td>";
+											echo "<input type='checkbox' style='opacity: 0;' name='active' id='".$socio->Id."'";
+											if($socio->Active == Helpers_Const::ITEMACTIVE)
+											{ echo " checked>"; }
+											else{ echo ">"; }
+										echo "</td>";
 									echo "</tr>";
 		                    	}
 		                    }

@@ -295,18 +295,18 @@ jQuery(document).ready(function() {
 	/******** JLB ********/			
 	/******** MENU *******/
 	$('#primary_nav li').each(function(){
-		if(jQuery(this).attr('menuid') && jQuery(this).attr('menuid').length > 0){
-			if(jQuery(this).attr('menuid') == jQuery(this).attr('id')){
-				jQuery(this).addClass('active');
+		if($(this).attr('menuid') && $(this).attr('menuid').length > 0){
+			if($(this).attr('menuid') == $(this).attr('id')){
+				$(this).addClass('active');
 			}
 		}
 	});
 	
 	/******** SUBMENU *******/
 	$('#secondary_nav li').each(function(){
-		if(jQuery(this).attr('submenuid') && jQuery(this).attr('submenuid').length > 0){
-			if(jQuery(this).attr('submenuid') == jQuery(this).attr('id')){
-				jQuery(this).addClass('active');
+		if($(this).attr('submenuid') && $(this).attr('submenuid').length > 0){
+			if($(this).attr('submenuid') == $(this).attr('id')){
+				$(this).addClass('active');
 			}
 		}
 	});

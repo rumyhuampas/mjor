@@ -21,6 +21,7 @@ class Controller_Socios extends Controller {
 			if(!Helpers_Socio::exists($_POST['name'])){
 				$socio = ORM::factory('socio');
 				$socio->Name = $_POST['name'];
+				$socio->Active = Helpers_Const::ITEMACTIVE;
 				$socio->create();
 				
 				HTTP::redirect(Route::get('msg')->uri(array('controller' => 'socios', 'action' => 'index',
@@ -30,6 +31,22 @@ class Controller_Socios extends Controller {
 				HTTP::redirect(Route::get('msg')->uri(array('controller' => 'socios', 'action' => 'index',
 					'msgtype' => 'msg_Error', 'msgtext' => 'El socio ya existe.')));
 			}	
+		}
+	}
+	
+	public function action_changeactive(){
+		if ($this->request->is_ajax()) {
+			$id = $_POST['id'];
+			$active = Helpers_Const::ITEMINACTIVE;
+			if($_POST['active'] == 'true'){
+				$active = Helpers_Const::ITEMACTIVE;
+			}
+			
+			$socio = ORM::factory('socio', $id);
+			if($socio->loaded()){
+				$socio->Active = $active;
+				$socio->update();
+			}
 		}
 	}
 

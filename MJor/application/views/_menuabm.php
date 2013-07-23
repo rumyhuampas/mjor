@@ -10,15 +10,18 @@
 		</a>
 	</li>
 	<li id=<?php echo Helpers_Const::MENUABMCAMPANASID; ?> submenuid=<?php echo $_submenuid ?>>
-		<a href="#"><span class="iconsweet">o</span>Campanas
+		<a href=<?php echo URL::base().Route::get('default')->uri(array('controller' => 'campanias', 'action' => 'index')); ?>>
+			<span class="iconsweet">o</span>Campanas
 		</a>
 	</li>
 	<li id=<?php echo Helpers_Const::MENUABMTAREASID; ?> submenuid=<?php echo $_submenuid ?>>
-		<a href="#"><span class="iconsweet">S</span>Tareas
+		<a href=<?php echo URL::base().Route::get('default')->uri(array('controller' => 'tareas', 'action' => 'index')); ?>>
+			<span class="iconsweet">S</span>Tareas
 		</a>
 	</li>
 	<li id=<?php echo Helpers_Const::MENUABMTARIFASID; ?> submenuid=<?php echo $_submenuid ?>>
-		<a href="#"><span class="iconsweet">S</span>Tarifas
+		<a href=<?php echo URL::base().Route::get('default')->uri(array('controller' => 'tarifas', 'action' => 'index')); ?>>
+			<span class="iconsweet">S</span>Tarifas
 		</a>
 	</li>
 	<li id=<?php echo Helpers_Const::MENUABMEMPLEADOSID; ?> submenuid=<?php echo $_submenuid ?>>

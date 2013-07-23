@@ -10,8 +10,6 @@ class Controller_Fincas extends Controller {
 		$view->_submenuid = Helpers_Const::MENUABMFINCASID;
 		$view->_menutitle = Helpers_Const::MENUABMTITLE;
 		$view->_fincas = Helpers_Finca::get();
-		//$view->lastmodif = Helpers_Cerda::getLastModifications();
-		//$view->maxweights = Helpers_Cerda::getMaxWeights();
 		$this->response->body($view->render());
 	}
 	
@@ -23,6 +21,7 @@ class Controller_Fincas extends Controller {
 			if(!Helpers_Finca::exists($_POST['name'])){
 				$finca = ORM::factory('finca');
 				$finca->Name = $_POST['name'];
+				$finca->Active = Helpers_Const::ITEMACTIVE;
 				$finca->create();
 				
 				HTTP::redirect(Route::get('msg')->uri(array('controller' => 'fincas', 'action' => 'index',
@@ -32,6 +31,22 @@ class Controller_Fincas extends Controller {
 				HTTP::redirect(Route::get('msg')->uri(array('controller' => 'fincas', 'action' => 'index',
 					'msgtype' => 'msg_Error', 'msgtext' => 'La finca ya existe.')));
 			}	
+		}
+	}
+	
+	public function action_changeactive(){
+		if ($this->request->is_ajax()) {
+			$id = $_POST['id'];
+			$active = Helpers_Const::ITEMINACTIVE;
+			if($_POST['active'] == 'true'){
+				$active = Helpers_Const::ITEMACTIVE;
+			}
+			
+			$finca = ORM::factory('finca', $id);
+			if($finca->loaded()){
+				$finca->Active = $active;
+				$finca->update();
+			}
 		}
 	}
 
