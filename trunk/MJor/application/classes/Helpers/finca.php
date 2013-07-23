@@ -18,4 +18,19 @@ class Helpers_Finca {
 				->find_all();
 		}
 	}
+	
+	public static function getActive($name = NULL){
+		if($name != NULL){
+			return ORM::factory('finca')
+				->where('Name', '=', $name)
+				->and_where('Active', '=', Helpers_Const::ITEMACTIVE)
+				->find();
+		}
+		else{
+			return ORM::factory('finca')
+				->where('Active', '=', Helpers_Const::ITEMACTIVE)
+				->order_by('Name')
+				->find_all();
+		}
+	}
 }

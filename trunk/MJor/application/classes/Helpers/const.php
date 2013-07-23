@@ -4,6 +4,9 @@ class Helpers_Const {
 	/******** APLICACION *********/
 	const APPNAME = 'JorMan';
 	
+	const ITEMACTIVE = 'Y';
+	const ITEMINACTIVE = 'N';
+	
 	/******** MENU *********/
 	const MENUINICIOID = '0';
 	const MENUABMID = '3';
