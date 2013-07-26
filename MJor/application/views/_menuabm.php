@@ -26,7 +26,7 @@
 	</li>
 	<li id=<?php echo Helpers_Const::MENUABMEMPLEADOSID; ?> submenuid=<?php echo $_submenuid ?>>
 		<a href=<?php echo URL::base().Route::get('default')->uri(array('controller' => 'empleados', 'action' => 'index')); ?>>
-			<span class="iconsweet">S</span>Empleados
+			<span class="iconsweet">f</span>Empleados
 		</a>
 	</li>
 </ul>
