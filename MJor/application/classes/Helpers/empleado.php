@@ -4,7 +4,7 @@ class Helpers_Empleado {
 
 	public static function exists($dni){
 		$empleado = ORM::factory('empleado')->where('DNI', '=', $dni)->find();
-		return $empelado->loaded();
+		return $empleado->loaded();
 	}
 	
 	public static function get($dni = NULL){

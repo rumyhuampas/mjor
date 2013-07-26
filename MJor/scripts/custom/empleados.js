@@ -13,4 +13,24 @@ jQuery(document).ready(function() {
 		    }
     	);
 	});
+	
+	jQuery( "#socio" ).autocomplete({
+		source: '/mjor/empleados/getAutoSocios/'
+	});
+	
+	jQuery( "#tarifa" ).autocomplete({
+		source: '/mjor/empleados/getAutoTarifas/'
+	});
+	
+	jQuery( "#tarifaesp" ).autocomplete({
+		source: '/mjor/empleados/getAutoTarifas/'
+	});
+	
+	jQuery( "#fincatrab" ).autocomplete({
+		source: '/mjor/empleados/getAutoFincas/'
+	});
+	
+	jQuery( "#fincacobro" ).autocomplete({
+		source: '/mjor/empleados/getAutoFincas/'
+	});
 });

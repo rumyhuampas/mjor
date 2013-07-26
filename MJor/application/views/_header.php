@@ -38,12 +38,14 @@
 		<script src=<?php echo URL::base()."/scripts/jquery.autogrowtextarea.js" ?> type="text/javascript"></script>
 		<script src=<?php echo URL::base()."/scripts/form_elements.js" ?> type="text/javascript"></script>
 		<script src=<?php echo URL::base()."/scripts/jquery.ui.core.js" ?> type="text/javascript"></script>
+		<script src=<?php echo URL::base()."/scripts/jquery.ui.position.js" ?> type="text/javascript"></script><!-- JLB -->
 		<script src=<?php echo URL::base()."/scripts/jquery.ui.widget.js" ?> type="text/javascript"></script>
 		<script src=<?php echo URL::base()."/scripts/jquery.ui.mouse.js" ?> type="text/javascript"></script>
 		<script src=<?php echo URL::base()."/scripts/jquery.ui.slider.js" ?> type="text/javascript"></script>
 		<script src=<?php echo URL::base()."/scripts/jquery.ui.progressbar.js" ?> type="text/javascript"></script>
 		<script src=<?php echo URL::base()."/scripts/jquery.ui.datepicker.js" ?> type="text/javascript"></script>
 		<script src=<?php echo URL::base()."/scripts/jquery.ui.tabs.js" ?> type="text/javascript"></script>
+		<script src=<?php echo URL::base()."/scripts/jquery.ui.autocomplete.js" ?> type="text/javascript"></script><!-- JLB -->
 		<script src=<?php echo URL::base()."/scripts/fullcalendar.js" ?> type="text/javascript"></script>
 		<script src=<?php echo URL::base()."/scripts/gcal.js" ?> type="text/javascript"></script>
 		<script src=<?php echo URL::base()."/scripts/bootstrap-modal.js" ?> type="text/javascript"></script>

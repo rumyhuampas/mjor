@@ -33,4 +33,25 @@ class Helpers_Finca {
 				->find_all();
 		}
 	}
+	
+	public static function getForCombo(){
+		return DB::select('id', 'name')
+			->from('fincas')
+			->where('Active', '=', Helpers_Const::ITEMACTIVE)
+			->order_by('Name', 'ASC')
+			->execute()->as_array('id', 'name');
+	}
+	
+	public static function getForAuto(){
+		$data = DB::select('name')
+			->from('fincas')
+			->where('Active', '=', Helpers_Const::ITEMACTIVE)
+			->order_by('Name', 'ASC')
+			->execute();
+		$jsonarray = array();
+		for($i=0; $i<count($data); $i++){
+			array_push($jsonarray, $data[$i]['name']);
+		}
+		return $jsonarray;
+	}
 }
