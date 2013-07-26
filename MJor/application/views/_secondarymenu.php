@@ -24,5 +24,6 @@
 	<?php
 		if($_menutitle == Helpers_Const::MENUINICIOTITLE) include Kohana::find_file('views', '_menuinicio');
 		if($_menutitle == Helpers_Const::MENUABMTITLE) include Kohana::find_file('views', '_menuabm');
+        if($_menutitle == Helpers_Const::MENUOPERTITLE) include Kohana::find_file('views', '_menuoper');
 	?>
 </nav>
