@@ -10,7 +10,7 @@ class Helpers_Const {
 	/******** MENU *********/
 	const MENUINICIOID = '0';
 	const MENUABMID = '3';
-	const MENUCERDASID = '2';
+	const MENUOPERID = '2';
 	const MENUSERVICIOSID = '3';
 	const MENUPARTOSID = '4';
 	const MENUDESTETESID = '5';
@@ -26,5 +26,6 @@ class Helpers_Const {
 	const MENUABMEMPLEADOSID = '5';
 	
 	const MENUINICIOTITLE = 'Inicio';
+	const MENUOPERTITLE = 'Operaciones';
 	const MENUABMTITLE = 'Abm';
 }

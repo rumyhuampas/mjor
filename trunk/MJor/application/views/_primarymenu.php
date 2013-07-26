@@ -6,9 +6,9 @@
         		<?php echo Helpers_Const::MENUINICIOTITLE; ?>
         	</a>
         </li>
-        <li id=<?php echo Helpers_Const::MENUINICIOID; ?> menuid=<?php echo $_menuid ?> class="nav_graphs">
-        	<a href="charts.html">
-        		Graphs
+        <li id=<?php echo Helpers_Const::MENUOPERID; ?> menuid=<?php echo $_menuid ?> class="nav_graphs">
+        	<a href=<?php echo URL::base().Route::get('default')->uri(array('controller' => 'partes', 'action' => 'index')); ?>>
+        		<?php echo Helpers_Const::MENUOPERTITLE; ?>
         	</a>
         </li>
         <li id=<?php echo Helpers_Const::MENUABMID; ?> menuid=<?php echo $_menuid ?> class="nav_forms">

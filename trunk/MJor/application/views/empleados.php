@@ -26,7 +26,7 @@
 			<!--One_Wrap-->
 		 	<div class="one_wrap fl_left">
 		    	<div class="widget">
-		        	<div class="widget_title"><span class="iconsweet">r</span><h5>Nuevo Empleado</h5></div>
+		        	<div class="widget_title"><span class="iconsweet">a</span><h5>Nuevo Empleado</h5></div>
 		            <div class="widget_body">
 						<!--Form fields-->		                
 		                <?php echo Form::open('empleados/new', array('method' => 'POST'));
