@@ -24,6 +24,8 @@ class Helpers_Const {
 	const MENUABMTAREASID = '3';
 	const MENUABMTARIFASID = '4';
 	const MENUABMEMPLEADOSID = '5';
+    
+    const MENUOPERPARTEID = '0';
 	
 	const MENUINICIOTITLE = 'Inicio';
 	const MENUOPERTITLE = 'Operaciones';
