@@ -23,7 +23,8 @@
 	<h2><?php echo $_menutitle ?></h2>
 	<?php
 		if($_menutitle == Helpers_Const::MENUINICIOTITLE) include Kohana::find_file('views', '_menuinicio');
+		if($_menutitle == Helpers_Const::MENUOPERTITLE) include Kohana::find_file('views', '_menuoper');
 		if($_menutitle == Helpers_Const::MENUABMTITLE) include Kohana::find_file('views', '_menuabm');
-        if($_menutitle == Helpers_Const::MENUOPERTITLE) include Kohana::find_file('views', '_menuoper');
+		if($_menutitle == Helpers_Const::MENUREPOTITLE) include Kohana::find_file('views', '_menurepo');
 	?>
 </nav>

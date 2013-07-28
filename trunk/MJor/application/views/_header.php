@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 
-	<!-- Mirrored from breeze.pcollab.com/dw1.2/HTML_default/index.html by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 23 Jun 2012 06:50:01 GMT -->
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
