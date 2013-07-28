@@ -16,19 +16,9 @@
         		<?php echo Helpers_Const::MENUABMTITLE; ?>
         	</a>
         </li>
-        <li id=<?php echo Helpers_Const::MENUINICIOID; ?> menuid=<?php echo $_menuid ?> class="nav_typography">
-        	<a href="typography.html">
-        		Typography
-        	</a>
-        </li>
-        <li id=<?php echo Helpers_Const::MENUINICIOID; ?> menuid=<?php echo $_menuid ?> class="nav_uielements">
-        	<a href="ui_elements.html">
-        		UI Elements
-        	</a>
-        </li>
-        <li id=<?php echo Helpers_Const::MENUINICIOID; ?> menuid=<?php echo $_menuid ?> class="nav_pages">
-        	<a href="pages.html">
-        		Pages
+        <li id=<?php echo Helpers_Const::MENUREPOID; ?> menuid=<?php echo $_menuid ?> class="nav_pages">
+        	<a href=<?php echo URL::base().Route::get('default')->uri(array('controller' => 'reportes', 'action' => 'index')); ?>>
+        		<?php echo Helpers_Const::MENUREPOTITLE; ?>
         	</a>
         </li>
     </ul>

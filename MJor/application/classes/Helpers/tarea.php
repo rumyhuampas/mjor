@@ -33,4 +33,17 @@ class Helpers_Tarea {
 				->find_all();
 		}
 	}
+	
+	public static function getForAuto(){
+		$data = DB::select('name')
+			->from('tareas')
+			->where('Active', '=', Helpers_Const::ITEMACTIVE)
+			->order_by('Name', 'ASC')
+			->execute();
+		$jsonarray = array();
+		for($i=0; $i<count($data); $i++){
+			array_push($jsonarray, $data[$i]['name']);
+		}
+		return $jsonarray;
+	}
 }

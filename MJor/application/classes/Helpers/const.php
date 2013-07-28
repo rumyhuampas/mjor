@@ -9,13 +9,9 @@ class Helpers_Const {
 	
 	/******** MENU *********/
 	const MENUINICIOID = '0';
-	const MENUABMID = '3';
-	const MENUOPERID = '2';
-	const MENUSERVICIOSID = '3';
-	const MENUPARTOSID = '4';
-	const MENUDESTETESID = '5';
-	const MENULACTANCIAID = '6';
-	const MENUREPORTESID = '7';
+	const MENUOPERID = '1';
+	const MENUABMID = '2';
+	const MENUREPOID = '3';
 	
 	/******** SUBMENU *********/
 	const MENUABMFINCASID = '0';
@@ -27,7 +23,10 @@ class Helpers_Const {
     
     const MENUOPERPARTEID = '0';
 	
+	const MENUREPOVALESID = '0';
+	
 	const MENUINICIOTITLE = 'Inicio';
 	const MENUOPERTITLE = 'Operaciones';
 	const MENUABMTITLE = 'Abm';
+	const MENUREPOTITLE = 'Reportes';
 }
