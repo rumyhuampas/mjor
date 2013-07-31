@@ -10,32 +10,23 @@ class Controller_Reportes extends Controller {
         $view->_submenuid = Helpers_Const::MENUREPOVALESID;
 		$view->_menutitle = Helpers_Const::MENUREPOTITLE;
 		$view->_vales = Helpers_Vale::get();
+		$view->_valeid = $this->request->param('id');
 		$this->response->body($view->render());
 	}
 	
 	public function action_newvale(){
-		if ($this->request->is_ajax()) {
-			$result = array();
-			if(isset($_POST['text']) && $_POST['text'] != ''){
-				$vale = ORM::factory('vale');
-				$vale->date = DateTime::createFromFormat('d/m/Y', $_POST['date'])->format('Y-m-d');
-				$vale->text = $_POST['text'];
-				$vale->create();
-				
-				array_push($result, $vale->Id);
-				array_push($result, URL::base().Route::get('msg')->uri(array('controller' => 'reportes', 'action' => 'index',
-					'msgtype' => 'msg_Success', 'msgtext' => 'Vale agregado con exito.')));
-				echo json_encode($result);
-			}
-			else{
-				array_push($result, NULL);
-				array_push($result, URL::base().Route::get('msg')->uri(array('controller' => 'reportes', 'action' => 'index',
-					'msgtype' => 'msg_Error', 'msgtext' => 'Debe completar todos los campos.')));
-				echo json_encode($result);
-			}
+		if(isset($_POST['text']) && $_POST['text'] != ''){
+			$vale = ORM::factory('vale');
+			$vale->date = DateTime::createFromFormat('d/m/Y H:i:s', $_POST['date'])->format('Y-m-d H:i:s');
+			$vale->text = $_POST['text'];
+			$vale->create();
+			
+			HTTP::redirect(Route::get('msgid')->uri(array('controller' => 'reportes', 'action' => 'index',
+				'id' => $vale->Id, 'msgtype' => 'msg_Success', 'msgtext' => 'Vale agregado con exito.')));
 		}
 		else{
-			HTTP::redirect(Route::get('default')->uri(array('controller' => 'reportes', 'action' => 'index')));
+			HTTP::redirect(Route::get('msg')->uri(array('controller' => 'reportes', 'action' => 'index',
+				'msgtype' => 'msg_Error', 'msgtext' => 'Debe completar todos los campos.')));
 		}
 	}
 	

@@ -34,7 +34,7 @@
 								echo "<li>";
 		                    		echo Form::label('date', 'Fecha');
 									echo '<div class="form_input">';
-									echo Form::input('date', date("d/m/Y"), array('type' => 'text', 'style' => 'width:20%;', 'id' => 'datepicker'));
+									echo Form::input('date', date("d/m/Y H:i:s"), array('type' => 'text', 'style' => 'width:20%;', 'id' => 'datepicker'));
 		                        	echo '</div>';
 								echo "</li>";
 								echo "<li>";
@@ -46,8 +46,8 @@
 		                    echo '</ul>';
 							
 							echo '<div class="action_bar">';
-								echo '<a class="button_small bluishBtn fl_right" id="btnsave"><span class="iconsweet">=</span>Guardar</a>';
-		                    	//echo Form::button('btnsave', '<span class="iconsweet">=</span>Guardar', array('class' => 'button_small bluishBtn fl_right', 'id' => 'btnsave'));
+								//echo '<a class="button_small bluishBtn fl_right" id="btnsave"><span class="iconsweet">=</span>Guardar</a>';
+		                    	echo Form::button('btnsave', '<span class="iconsweet">=</span>Guardar', array('class' => 'button_small bluishBtn fl_right', 'id' => 'btnsave'));
 								echo "<br class='clear' />";
 		                    echo '</div>';
 		                echo Form::close();
@@ -78,7 +78,7 @@
 										echo "<td>".$vale->text."</td>";
 										echo "<td>";
 											echo '<span class="data_actions iconsweet">';
-											echo Form::open('reportes/printvale', array('method' => 'POST', 'target' => '_blank', 'id' => 'formprintvale'));
+											echo Form::open('reportes/printvale', array('method' => 'POST', 'target' => '_blank', 'id' => 'formprintvale'.$vale->Id));
 												echo Form::hidden('valeid', $vale->Id);
 												echo '<a href="#" original-title="Reimprimir" class="tip_north" name="reprint">V</a>';
 											echo Form::close();
@@ -87,6 +87,9 @@
 									echo "</tr>";
 		                    	}
 		                    }
+							if(isset($_valeid)){
+								echo Form::hidden('_valeid', $_valeid);
+							}
 		                    ?>
 		                </table>
 						<div class="action_bar">
