@@ -43,7 +43,7 @@ class Controller_Reportes extends Controller {
 		//if ($this->request->is_ajax()) {
 			$vale = ORM::factory('vale', $_POST['valeid']);
 			if($vale->loaded()){
-				$pdf = Helpers_Reportes::createVale($vale->date, $vale->text);
+				$pdf = Helpers_Reportes::createVale($vale->Id, $vale->date, $vale->text);
 				$this->response->headers(array('Content-Type' => 'application/pdf'));
 				Helpers_Reportes::show($pdf);
 			}

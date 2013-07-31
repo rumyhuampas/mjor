@@ -21,10 +21,12 @@ class Helpers_Reportes {
 		$pdf->inline($pdf->filename);
 	}
 
-	public static function createVale(){
+	public static function createVale($id, $date, $text){
 		$pdf = Helpers_Reportes::create('reports/vale', 'A4-L');
 		$stylesheet = file_get_contents('assets/css/pdfstyle.css');
 		$pdf->get_mpdf()->WriteHTML($stylesheet, 1);
+		
+		$pdf->showImageErrors = true;
 		
 		$pdf->get_mpdf()->SetTitle(Helpers_Const::APPNAME.' - Vale');
 		$pdf->get_mpdf()->SetSubject('Vale');
@@ -33,6 +35,10 @@ class Helpers_Reportes {
 		
 		$pdf->title = Helpers_Const::APPNAME.' - Vale';
 		$pdf->filename = Helpers_Const::APPNAME.' - vale.pdf';
+		
+		$pdf->_id = $id;
+		$pdf->_date = $date;
+		$pdf->_text = $text;
 		
 		return $pdf;
 	}

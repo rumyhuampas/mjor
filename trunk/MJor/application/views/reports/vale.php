@@ -1,5 +1,5 @@
 <?php include Kohana::find_file('views', 'reports/_header'); ?>
-
+                  	
 <!--Dreamworks Container-->
 <div id="dreamworks_container">
     
@@ -10,79 +10,60 @@
 		<div id="content_wrap" style="margin-left:0px;">	
 	        <div class="one_wrap">
 	        	<div class="widget">
-		        	<div class="widget_title"><h1>vale</h1><h5> POR</h5></div>
-		            	<div class="widget_body">
-		            	</div>
-		            </div>
-	        </div>
-	        
-	        
-			<!--One_Wrap
-		 	<div class="one_wrap">
-		    	<div class="widget">
-		        	<div class="widget_title"><span class="iconsweet">f</span><h5>Activity across your projects</h5></div>
+		        	<!--<div class="widget_title">
+		        	</div>-->
 		            <div class="widget_body">
-		            	<table class="activity_datatable" width="100%" border="0" cellspacing="0" cellpadding="8">
-		                    <tr>
-		                        <th width="8%">ID</th>
-		                        <th width="15%">Category</th>
-		                        <th width="32%">Project(s)</th>
-		                        <th width="12%">Status</th>
-		                        <th width="20%">Remarks</th>
-		                        <th width="13%">Actions</th>
-		                    </tr>
-		                    <tr>
-		                        <td>4923</td>
-		                        <td><span class="green_highlight pj_cat">Android</span></td>
-		                        <td><a href="#">Eodem modo typi, qui nunc nobi...</a></td>
-		                        <td><span class="stat_up">72% <span class="arrow_up iconsweet">]</span></span></td>
-		                        <td>Assigned to - <a href="#">SA</a></td>
-		                        <td><span class="data_actions iconsweet"><a class="tip_north" original-title="User" href="#">a</a> <a class="tip_north" original-title="Edit" href="#">C</a> 						<a class="tip_north" original-title="Delete" href="#">X</a></span></td>
-		                    </tr>
-		                    <tr>
-		                        <td>3568</td>
-		                        <td><span class="grey_highlight pj_cat">Flex</span></td>
-		                        <td><a href="#">Eodem modo typi, qui nunc nobi...</a></td>
-		                        <td><span class="stat_down">12% <span class="arrow_up iconsweet">[</span></span></td>
-		                        <td>Assigned to - <a href="#">SA</a></td>
-		                        <td><span class="data_actions iconsweet"><a class="tip_north" original-title="User" href="#">a</a> <a class="tip_north" original-title="Edit" href="#">C</a> 						<a class="tip_north" original-title="Delete" href="#">X</a></span></td>                    </tr>
-		                    <tr>
-		                        <td>4923</td>
-		                        <td><span class="green_highlight pj_cat">Android</span></td>
-		                        <td><a href="#">Eodem modo typi, qui nunc nobi...</a></td>
-		                        <td><span class="stat_down">72% <span class="arrow_up iconsweet">[</span></span></td>
-		                        <td>Assigned to - <a href="#">SA</a></td>
-		                        <td><span class="data_actions iconsweet"><a class="tip_north" original-title="User" href="#">a</a> <a class="tip_north" original-title="Edit" href="#">C</a> 						<a class="tip_north" original-title="Delete" href="#">X</a></span></td>                    </tr>
-		                    <tr>
-		                        <td>4923</td>
-		                        <td><span class="grey_highlight pj_cat">Flex</span></td>
-		                        <td><a href="#">Eodem modo typi, qui nunc nobi...</a></td>
-		                        <td><span class="stat_up">72% <span class="arrow_up iconsweet">]</span></span></td>
-		                        <td>Assigned to - <a href="#">SA</a></td>
-		                        <td><span class="data_actions iconsweet"><a class="tip_north" original-title="User" href="#">a</a> <a class="tip_north" original-title="Edit" href="#">C</a> 						<a class="tip_north" original-title="Delete" href="#">X</a></span></td>                    </tr>
-		                    <tr>
-		                        <td>4923</td>
-		                        <td><span class="blue_highlight pj_cat">JAVA</span></td>
-		                        <td><a href="#">Eodem modo typi, qui nunc nobi...</a></td>
-		                        <td><span class="stat_down">44% <span class="arrow_up iconsweet">[</span></span></td>
-		                        <td>Assigned to - <a href="#">SA</a></td>
-		                        <td><span class="data_actions iconsweet"><a class="tip_north" original-title="User" href="#">a</a> <a class="tip_north" original-title="Edit" href="#">C</a> 						<a class="tip_north" original-title="Delete" href="#">X</a></span></td>                    
-		                     </tr>                          
-		                    <tr>
-		                        <td>4923</td>
-		                        <td><span class="green_highlight pj_cat">Android</span></td>
-		                        <td><a href="#">Eodem modo typi, qui nunc nobi...</a></td>
-		                        <td><span class="stat_down">72% <span class="arrow_up iconsweet">[</span></span></td>
-		                        <td>Assigned to - <a href="#">SA</a></td>
-		                        <td><span class="data_actions iconsweet"><a class="tip_north" original-title="User" href="#">a</a> <a class="tip_north" original-title="Edit" href="#">C</a> 						<a class="tip_north" original-title="Delete" href="#">X</a></span></td>                    
-		                     </tr>                   
-		                </table>
-						<div class="action_bar">
-		                    <a class="button_small whitishBtn" href="#"><span class="iconsweet">l</span>Export Table</a>
-		                </div>
+		            	<div class="content_pad"> 
+		            		<div class="widgets_wrap">
+	                        	<div class="one_two_wrap" style=" padding: 10px; border: 1px solid black">
+	                        		<table class="valetitle">
+	                        			<tr style="">
+	                        				<td class="hXXL blue" width="15%">vale</td>
+	                        				<td class="hXL blue" width="70%" style="padding:10px; vertical-align:bottom;">por</td>
+	                        				<td class="hXL white" width="10%" style="vertical-align:middle;">N</td>
+	                        				<td class="hXL white" width="10%" style="vertical-align:middle;"><?php echo $_id; ?></td>
+	                        			</tr>
+	                        		</table>
+	                        		<div style="margin-top: 10px;">
+	                        			Fecha
+		                        		<table class="valefecha">
+		                        			<tr>
+		                        				<td class="hM" width="33%"><?php echo date("d", strtotime($_date)); ?></td>
+		                        				<td class="hM" width="33%"><?php echo date("m", strtotime($_date)); ?></td>
+		                        				<td class="hM" width="33%"><?php echo date("y", strtotime($_date)); ?></td>
+		                        			</tr>
+		                        		</table>
+	                        		</div>
+	                        		<p class="hM valetext" height="150px;"><?php echo 'Vale por: '.$_text; ?></p>
+	                        		
+	                        		<div width="100%">
+	                        			<div width="220px" style="float: left;">
+			                        		<table width="100%" style="border: 1px solid black;">
+			                        			<tr>
+			                        				<td width="100%" height="50px" style="text-align: center;"></td>
+			                        			</tr>
+			                        			<tr>
+			                        				<td class="hS" width="100%" style="text-align: center;">Autorizo</td>
+			                        			</tr>
+			                        		</table>
+		                        		</div>
+		                        		<div width="220px" style="float: right;">
+			                        		<table width="100%" style="border: 1px solid black;">
+			                        			<tr>
+			                        				<td width="100%" height="50px" style="text-align: center;"></td>
+			                        			</tr>
+			                        			<tr>
+			                        				<td class="hS" width="100%" style="text-align: center;">Firma</td>
+			                        			</tr>
+			                        		</table>
+		                        		</div>
+	                        		</div>
+	                            </div>
+	                    	</div>                            
+                        </div>
 		            </div>
 		        </div>
-		    </div>-->
+	        </div>
 		              
 		</div><!--Content Wrap-->
 	
