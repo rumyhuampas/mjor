@@ -10,10 +10,23 @@ jQuery(document).ready(function() {
 	    	},
 		    function( data ){
 		    	data = JSON.parse(data);
-	    		window.location.replace(data[1]);
 	    		if(data[0] != null){
-	    			var win = window.open('/mjor/reportes/printvale/', '_blank');
-					win.focus();
+	    			var url = data[1];
+	    			jQuery.post( 
+				    	'/mjor/reportes/printvale/',
+				    	{
+				    		valeid: data[0],
+				    	},
+					    function( data ){
+							var newwin = window.open("", '_blank');
+			    			newwin.document.open("application/pdf");
+			    			newwin.document.write(data);
+			    			newwin.document.close();
+			    			newwin.focus();
+			    			
+			    			window.location.replace(url);
+					    }
+			    	);
 				}
 		    }
     	);
@@ -21,28 +34,6 @@ jQuery(document).ready(function() {
 	
 	$('[name=reprint]').click (function ()
 	{
-		$('#formprintvale').submit();
+		$(this).closest("form").submit();
 	});
-	
-	/*$('#reprint').click (function ()
-	{
-		var thisbtn = $(this);
-		jQuery.post( 
-	    	'/mjor/reportes/printvale/',
-	    	{
-	    		valeid: thisbtn.attr('valeid'),
-	    	},
-		    function( data ){
-    			//var win = window.open("data:application/pdf," + data, '_blank');
-    			//var win = window.open("data:application/pdf;base64, " + escape(data));
-    			//win.document.write(data);
-				//win.focus();
-				var newwin = window.open("data:application/pdf");
-    			newwin.document.open("application/pdf");
-    			//newwin.document.write(data);
-    			newwin.document.close()
-    			newwin.focus()
-		    }
-    	);
-	});*/
 });

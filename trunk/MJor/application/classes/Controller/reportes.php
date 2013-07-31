@@ -20,7 +20,7 @@ class Controller_Reportes extends Controller {
 				$vale = ORM::factory('vale');
 				$vale->date = DateTime::createFromFormat('d/m/Y', $_POST['date'])->format('Y-m-d');
 				$vale->text = $_POST['text'];
-				//$vale->create();
+				$vale->create();
 				
 				array_push($result, $vale->Id);
 				array_push($result, URL::base().Route::get('msg')->uri(array('controller' => 'reportes', 'action' => 'index',
@@ -40,19 +40,14 @@ class Controller_Reportes extends Controller {
 	}
 	
 	public function action_printvale(){
-		//if ($this->request->is_ajax()) {
-			$vale = ORM::factory('vale', $_POST['valeid']);
-			if($vale->loaded()){
-				$pdf = Helpers_Reportes::createVale($vale->Id, $vale->date, $vale->text);
-				$this->response->headers(array('Content-Type' => 'application/pdf'));
-				Helpers_Reportes::show($pdf);
-			}
-			else{
-				//errorpdf
-			}
-		/*}
+		$vale = ORM::factory('vale', $_POST['valeid']);
+		if($vale->loaded()){
+			$pdf = Helpers_Reportes::createVale($vale->Id, $vale->date, $vale->text);
+			$this->response->headers(array('Content-Type' => 'application/pdf'));
+			Helpers_Reportes::show($pdf);
+		}
 		else{
-			HTTP::redirect(Route::get('default')->uri(array('controller' => 'reportes', 'action' => 'index')));
-		}	*/
+			//errorpdf
+		}
 	}
 }
