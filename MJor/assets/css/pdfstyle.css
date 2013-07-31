@@ -118,14 +118,6 @@ body{
 	width:35px;
 	text-align:center;	
 }
-.widget .widget_title h1{
-	color:#6c6c6c;
-	font-size:60px;
-	font-family:CorbelBold;
-	float:left;
-	padding:13px 0px 10px;
-	text-shadow: 0px 1px 0px  #fff;
-}
 .widget .widget_title h5{
 	color:#6c6c6c;
 	font-size:14px;
@@ -133,6 +125,92 @@ body{
 	float:left;
 	padding:13px 0px 10px;
 	text-shadow: 0px 1px 0px  #fff;
+}
+.widget_body h1, .widget_body h2, .widget_body h3, .widget_body h4, .widget_body h5, .widget_body h6{
+	font-family: 'CorbelRegular';
+	color:#4a4a4a;
+	margin-bottom:20px;
+}
+
+.widget_body p{
+	color:#424242;
+	line-height: 20px;
+    margin-bottom: 15px;
+}
+
+.widget_body blockquote {
+    border-left: 4px solid #DDDDDD;
+    color: #888888;
+    line-height: 20px;
+    margin-bottom: 14px;
+    padding-left: 14px;
+	text-align:center;
+	font-family: 'CorbelItalic';
+	font-style:italic;
+	font-size:14px;
+}
+
+h1 {
+    font-size: 28px;
+}
+h2 {
+    font-size: 26px;
+}
+h3 {
+    font-size: 24px;
+}
+h4 {
+    font-size: 22px;
+}
+h5 {
+    font-size: 20px;
+}
+h6 {
+    font-size: 18px;
+}
+.hXXL {
+	font-size: 60px;
+}
+.hXL {
+	font-size: 30px;
+}
+.hM {
+	font-size: 18px;
+}
+.hS {
+	font-size: 10px;
+}
+
+/*List Style*/
+
+.content_pad ul li, .content_pad ol li{
+	line-height:22px;	
+	margin-left:15px;
+}
+.content_pad ul li{
+	list-style:disc;
+}
+.content_pad ul li ul li{
+	list-style:circle;
+}
+.content_pad ol li{
+	list-style:decimal
+}
+.content_pad ol li ol li{
+	list-style:lower-alpha;
+}
+.content_pad ul.arrow li{
+	background:url(../images/arrow.png) no-repeat left 4px;
+	list-style:none;
+	margin-left:0px;
+	padding-left:20px;	
+}
+.content_pad ul.tick li{
+	background:url(../images/tick.html) no-repeat -2px 1px;
+	list-style:none;
+	margin-left:0px;
+	padding-left:20px;
+	
 }
 .fl_left{
 	float:left;
@@ -1328,4 +1406,31 @@ background-position:bottom;
 }
 ul.pagination li a:active{
 background-position:center;
+}
+
+/*************** JLB *****************/
+/*********** VALE *************/
+table.valetitle tr{
+	background-color:#0000BB; 
+	border: 1px solid #0000BB;
+}
+
+table.valetitle td.blue{
+	color:#FFFFFF;
+}
+
+table.valetitle td.white{
+	background-color:#FFFFFF;
+	color:#0000BB;
+}
+table.valefecha{
+	border: 1px solid blue;
+}
+table.valefecha td{
+	border: 1px solid blue;
+}
+.valetext{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border: 1px solid black;
 }

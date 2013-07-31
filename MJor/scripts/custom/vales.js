@@ -19,7 +19,7 @@ jQuery(document).ready(function() {
     	);
 	});
 	
-	$('#reprint').click (function ()
+	$('[name=reprint]').click (function ()
 	{
 		$('#formprintvale').submit();
 	});

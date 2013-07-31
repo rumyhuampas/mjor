@@ -80,7 +80,7 @@
 											echo '<span class="data_actions iconsweet">';
 											echo Form::open('reportes/printvale', array('method' => 'POST', 'target' => '_blank', 'id' => 'formprintvale'));
 												echo Form::hidden('valeid', $vale->Id);
-												echo '<a href="#" original-title="Reimprimir" class="tip_north" id="reprint">V</a>';
+												echo '<a href="#" original-title="Reimprimir" class="tip_north" name="reprint">V</a>';
 											echo Form::close();
 											echo '</span>';
 										echo "</td>";
