@@ -26,8 +26,6 @@ class Helpers_Reportes {
 		$stylesheet = file_get_contents('assets/css/pdfstyle.css');
 		$pdf->get_mpdf()->WriteHTML($stylesheet, 1);
 		
-		$pdf->showImageErrors = true;
-		
 		$pdf->get_mpdf()->SetTitle(Helpers_Const::APPNAME.' - Vale');
 		$pdf->get_mpdf()->SetSubject('Vale');
 		$pdf->get_mpdf()->SetAuthor(Helpers_Const::APPNAME);
