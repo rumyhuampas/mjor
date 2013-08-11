@@ -50,4 +50,27 @@ jQuery(document).ready(function() {
            alert(textStatus);
         }
     });
+    
+    $.ajax({
+        type: "POST",
+        url: "/mjor/partes/getAutoTarifas/",
+        dataType: "json",
+        data: "{}",
+        contentType: "application/json; charset=utf-8",
+        success: function(data) {
+            var datafromServer = data;
+            $("#tarifa").autocomplete({
+                source: datafromServer
+            });
+            $("#tarifaesp").autocomplete({
+                source: datafromServer
+            });
+        },
+        error: function(XMLHttpRequest, textStatus, errorThrown) {
+           alert(textStatus);
+        }
+    });
+    
+    /************* TIPO ********************/
+   
 });

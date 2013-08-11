@@ -29,4 +29,12 @@ class Helpers_Const {
 	const MENUOPERTITLE = 'Operaciones';
 	const MENUABMTITLE = 'Abm';
 	const MENUREPOTITLE = 'Reportes';
+	
+	public static function getNumbersArray($amount){
+		$numbers = array();
+		for($i=0;$i<=$amount;$i++){
+			array_push($numbers, $i);
+		}
+		return $numbers;
+	}
 }
