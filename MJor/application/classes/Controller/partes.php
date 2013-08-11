@@ -24,6 +24,10 @@ class Controller_Partes extends Controller {
 		echo json_encode(Helpers_Campania::getForAuto());
 	}
 	
+	public function action_getAutoTarifas(){
+		echo json_encode(Helpers_Tarifa::getForAuto());
+	}
+	
 	public function action_search(){
 		if(isset($_POST['searchdni'])){
 			$view = View::factory('partes');
